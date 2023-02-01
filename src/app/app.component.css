@@ -1,0 +1,41 @@
+.Logo{
+    opacity: 0;
+    animation-name: fadein, goUp;
+    animation-duration: 3s, 1s;
+    animation-delay: 0ms, 3000ms;
+    animation-fill-mode: forwards;
+}
+
+.defaultButton{
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-delay: 4000ms;
+    animation-fill-mode: forwards;
+}
+
+a{
+    animation-name: bg;
+    animation-duration: 1s;
+    animation-delay: 3000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+   to{
+    opacity: 1;
+   }
+}
+
+@keyframes goUp {
+    to{
+        opacity: 1;
+     scale: 0.7;
+    }
+ }
+
+ @keyframes bg {
+    to{
+    background-color: #00010b;
+    }
+ }
