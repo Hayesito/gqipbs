@@ -1,6 +1,9 @@
 <!-- NG-ZORRO -->
-<div style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%; background-color: black; cursor:default;" nz-row>
+<div *ngIf="(isLoading | async )" id="loading" class="back" style="position:absolute; display: flex;align-items: center;justify-content: center;height: 100%;width: 100%; background-color: black; cursor:default;" nz-row>
   <div nz-col class="centerContent" style="display: flex;" nzSpan="24">
     <img height="300" class="Logo" style="width: 50%; height: 50%;" src="https://i.imgur.com/ca3CEmA.png">
   </div>
+</div>
+<div class="content"style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%; background-color: black; cursor:default; background-image: url('https://media.tenor.com/odRbfMrobAcAAAAC/sans-undertale.gif');" nz-row>
+  <iframe *ngIf="!(isLoading | async )" src="https://www.youtube.com/embed/1r1BP77F9NU?autoplay=1&loop=1&rel=0&iv_load_policy=3&fs=0&controls=0&disablekb=1&playlist=1r1BP77F9NU" width="560" height="315" title="Chicos Estoy Comiendo Mortadela" frameborder="0"></iframe>
 </div>

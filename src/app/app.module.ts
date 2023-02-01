@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { ControlappService } from 'src/services/controlapp.service';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -28,7 +30,8 @@ registerLocaleData(en);
     NzGridModule
   ],
   providers: [
-    { provide: NZ_I18N, useValue: en_US }
+    { provide: NZ_I18N, useValue: en_US },
+    ControlappService
   ],
   bootstrap: [AppComponent]
 })

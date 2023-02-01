@@ -6,19 +6,27 @@
     animation-fill-mode: forwards;
 }
 
-.defaultButton{
-    opacity: 0;
-    animation-name: fadein;
-    animation-duration: 2s;
-    animation-delay: 4000ms;
+.back{
+    animation-name: bg, disappear;
+    animation-duration: 1s, 3s;
+    animation-delay: 3000ms, 6000ms;
     animation-fill-mode: forwards;
 }
 
-a{
-    animation-name: bg;
+.noRead{
+ display: none;
+}
+
+.content{
+    animation-name: gotofront;
     animation-duration: 1s;
     animation-delay: 3000ms;
     animation-fill-mode: forwards;
+}
+
+
+h1{
+    color: wheat;
 }
 
 @keyframes fadein {
@@ -37,5 +45,18 @@ a{
  @keyframes bg {
     to{
     background-color: #00010b;
+    }
+ }
+
+
+ @keyframes disappear {
+    to{
+        opacity: 0;
+    }
+ }
+
+ @keyframes gotofront {
+    to{
+        z-index: 20;
     }
  }
